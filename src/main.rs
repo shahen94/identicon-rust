@@ -13,11 +13,12 @@ fn main() {
 
   let path = builder.hash_username()
     .pick_color()
-    .set_grid();
-    // .filter_odd_squares()
-    // .build_pixel_map()
-    // .draw_image()
-    // .build();
+    .set_grid()
+    .filter_odd_squares()
+    .build_pixel_map()
+    .draw_image()
+    .build()
+    .save();
 
-    println!("{:?}", path);
+    println!("Identicon saved: {:?}", path);
 }
